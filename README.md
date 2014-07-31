@@ -20,4 +20,4 @@ Hopefully everything goes smoothly!
 
 NOTE: The script is pretty hacky and makes lots of assumptions about where it is in
 your filesystem realtive to the data-pipeline project. Be sure to follow the above instructions
-thoroughly, or face certain error. 
+thoroughly, or face certain error.
