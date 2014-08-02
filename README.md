@@ -4,7 +4,9 @@ Development Tools
 Virtual Environment Setup Script
 --------------------------------
 This simple script sets up a virtualenv development environment, complete with a properly
-configured python path, to be used when working on the data-pipeline source code
+configured python path, to be used when working on the data-pipeline source code.
+The virtualenv is also configured to automatically start the local postgreSQL
+database upon activation, and to automatically close it upon deactivation.
 
 To set up the environment, navigate to the parent directory of your data-pipeline/ directory.
 From there, say:

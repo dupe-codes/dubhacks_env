@@ -4,16 +4,16 @@
 cd ..
 project_home=$PWD
 
-# create virtual environment. MAKE SURE VIRTUALENV IS INSTALLED 
+# create virtual environment. MAKE SURE VIRTUALENV IS INSTALLED
 virtualenv dupstegu-datapipeline
 
-# Hack to get appropriate directories for python path 
+# Hack to get appropriate directories for python path
 cd data-pipeline/config
 config_directory=$PWD'/'
 cd ..; cd data_pipeline/models
 models_dir=$PWD'/'
 
-# Create python path configuration files 
+# Create python path configuration files
 cd $project_home
 cd dupstegu-datapipeline/lib/python2.7/site-packages/
 echo -n $config_directory > set_project_config_path.pth
@@ -30,4 +30,11 @@ sudo pip install -r requirements.txt
 cd ..;
 echo "Deactivating virtual environment..."
 deactivate dupstegu-datapipeline/bin/activate
+
+# Configure custom activation script for virtualenv
+cp dev-setup/activation_config.py dupstegu-datapipeline/bin/activation_config.py
+cd dupstegu-datapipeline/bin/
+python activation_config.py
+sudo rm activation_config.py
+
 echo "Setup complete."
