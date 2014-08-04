@@ -12,12 +12,15 @@ cd data-pipeline/config
 config_directory=$PWD'/'
 cd ..; cd data_pipeline/models
 models_dir=$PWD'/'
+cd ..;
+pipeline_dir=$PWD'/'
 
 # Create python path configuration files
 cd $project_home
 cd dupstegu-datapipeline/lib/python2.7/site-packages/
 echo -n $config_directory > set_project_config_path.pth
 echo -n $models_dir > set_project_models_path.pth
+echo -n $pipeline_dir > set_project_pipeline_path.pth
 
 # Now that virtualenv is configured, activate it and install requirements for project
 # Requirements need to be installed before anything else done, otherwise stuff explodes

@@ -23,3 +23,9 @@ Hopefully everything goes smoothly!
 NOTE: The script is pretty hacky and makes lots of assumptions about where it is in
 your filesystem realtive to the data-pipeline project. Be sure to follow the above instructions
 thoroughly, or face certain error.
+
+After Running the Script
+------------------------
+Once you've run the script, you can start the development environment to begin working by saying 
+`source dupstegu-datapipeline/bin/activate` from within the project parent directory. 
+When you're done developing, you can shut down the development environment by saying `deactivate`
